@@ -1,0 +1,55 @@
+h1 {
+  font-size: 2.5em;
+  font-family: sans-serif;
+  color: #333;
+  margin-bottom: 15px;
+}
+h2 {
+  font-size: 2em;
+  font-family: sans-serif;
+  color: #4B4B4B;
+  margin-bottom: 10px;
+}
+h3{
+	font-size: 1.5em;
+	font-family: sans-serif;
+	color: #4B4B4B;
+	margin: 0;
+}
+.slide-container-1col {
+  width: 75%;
+  margin: 0 auto;
+}
+.slide-container-2col {
+	display: inline-flex;
+	width: 40%;
+	vertical-align: middle;
+}
+.slide-container-3col {
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+}
+.slide-container-3col:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	font-weight: bold;
+}
+.section {
+  text-align: center;
+}
+.fp-slidesNav.bottom {
+  bottom: 25px;
+}
+#align-left {
+	text-align: left;
+}
+.two-col {
+	text-align: left;
+	list-style-type: none;
+}
+.two-col li {
+  float: left;
+  width: 90%;
+	padding: 10px;
+}
