@@ -21,10 +21,23 @@ $(function(){
 
   // hide mobile menu after clicking link
   $('.navbar-collapse a').click(function(){
-        $(".navbar-collapse").collapse('hide');
+        $('.navbar-collapse').collapse('hide');
     });
-
 });
+
+  // ARTIST PAGE
+  
+  // trigger popup
+  $('.artistContainer').on('click', 'div', function(e) {
+    $('[data-popup=popup]').fadeIn(350);
+    $('.load-page').append('<iframe width="100%" height="100%" src="' + 'artist-profile.html" ' + 'frameborder="0"></iframe>');    e.preventDefault();
+  });
+  // close popup
+  $('[data-popup-close]').on('click', function(e) {
+    $('[data-popup=popup]').fadeOut(350);
+    e.preventDefault();
+  });
+
 
 
 });

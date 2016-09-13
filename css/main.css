@@ -52,7 +52,6 @@ hr {
   padding-bottom: 100px;
 }
 
-
 /* =====================
 navigation section
 ======================== */
@@ -109,7 +108,6 @@ navigation section
     background: #4B4B4B;
   }
 }
-
 
 /* =====================
 HOME section
@@ -170,6 +168,7 @@ HOME section
   background: #00c6d7;
   border-color: transparent;
 }
+
 /* =====================
 ABOUT section
 =====================*/
@@ -223,11 +222,11 @@ ARTISTS section
 #artists img {
   width: 100%;
   transition: all 0.4s ease-in-out;
+
 }
 #artists img:hover {
   opacity: 0.5;
 }
-
 #artists .artistContainer {
   display: flex;
   flex-direction: row;
@@ -238,17 +237,72 @@ ARTISTS section
   width: 100%;
   border: 1px solid blue;
 }
-
 #artists .indivArtist {
   width: 160px;
   height: 200px;
   margin: 10px;
   border: 1px solid green;
 }
-
 #artists .indivArtist:hover {
   cursor: pointer;
   font-weight: bold;
+}
+
+/* popup - outer div */
+.popup {
+  width: 100%;
+  height: 90%;
+  display: none;
+  position: fixed;
+  top: 55px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.75)
+}
+
+/* popup - inner div */
+.popup-inner {
+  width: 90%;
+  height: 90%;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+  border-radius: 3px;
+  background: #f6f6f6;
+}
+.load-page {
+  width: 100%;
+  height: 100%;
+}
+
+/* popup - close button */
+.popup-close {
+  width: 30px;
+  height: 30px;
+  padding-top: 3px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transition: ease 0.25s all;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  border-radius: 1000px;
+  background: rgba(0, 0, 0, 0.8);
+  font-family: Arial, Sans-Serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100%;
+  color: #fff;
+}
+.popup-close:hover {
+  -webkit-transform: translate(50%, -50%) rotate(180deg);
+  transform: translate(50%, -50%) rotate(180deg);
+  background: rgba(0, 0, 0, 1);
+  text-decoration: none;
 }
 
 /* =====================
@@ -300,7 +354,6 @@ CONTACT section
 #contact input[type="submit"]:hover {
   color: #000000;
 }
-
 
 /* =====================
 footer section

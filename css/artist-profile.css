@@ -1,4 +1,8 @@
-h1 {
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
+}
+#artist-profile h1 {
   font-size: 2.5em;
   font-family: sans-serif;
   color: #333;
@@ -39,7 +43,7 @@ h3{
   text-align: center;
 }
 .fp-slidesNav.bottom {
-  bottom: 25px;
+  bottom: 10px;
 }
 #align-left {
 	text-align: left;

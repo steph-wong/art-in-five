@@ -17,10 +17,8 @@ html.fp-enabled,
 #superContainer {
     height: 100%;
     position: relative;
-
     /* Touch detection for Windows 8 */
     -ms-touch-action: none;
-
     /* IE 11 on Windows Phone 8.1*/
     touch-action: none;
 }
@@ -76,6 +74,9 @@ html.fp-enabled,
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+}
+.fp-controlArrow:hover{
+  opacity: 0.6;
 }
 .fp-controlArrow.fp-prev {
     left: 15px;

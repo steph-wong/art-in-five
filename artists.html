@@ -9,8 +9,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -37,6 +38,7 @@
 		</div>
 	</section>
 
+
 	<!-- ARTISTS section -->
 	<div id="artists">
 		<div class="container">
@@ -49,27 +51,27 @@
 
           <div class="artistContainer">
 
-            <div class="indivArtist">
+            <div class="indivArtist" data-popup-open="popup">
               <img src="http://placehold.it/160x180">
                 <p>Artist Name</p>
             </div>
 
-            <div class="indivArtist">
+            <div class="indivArtist" data-popup-open="popup">
               <img src="http://placehold.it/160x180">
                 <p>Artist Name</p>
             </div>
 
-            <div class="indivArtist">
+            <div class="indivArtist" data-popup-open="popup">
               <img src="http://placehold.it/160x180">
                 <p>Artist Name</p>
             </div>
 
-            <div class="indivArtist">
+            <div class="indivArtist" data-popup-open="popup">
               <img src="http://placehold.it/160x180">
                 <p>Artist Name</p>
             </div>
 
-            <div class="indivArtist">
+            <div class="indivArtist" data-popup-open="popup">
               <img src="http://placehold.it/160x180">
                 <p>Artist Name</p>
             </div>
@@ -108,13 +110,24 @@
 		</div>
 	</footer>
 
+
+	<!-- popup -->
+	<div class="popup" data-popup="popup">
+			<div class="popup-inner">
+				<a class="popup-close" data-popup-close="popup" href="#">x</a>
+				<div class="load-page"></div>
+			</div>
+	</div>
+
+
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 
 	<!-- plugins -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="js/smoothscroll.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 	<!-- stylesheet -->
 	<script src="js/custom.js"></script>
 
