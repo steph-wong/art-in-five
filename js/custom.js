@@ -26,7 +26,7 @@ $(function(){
 });
 
   // ARTIST PAGE
-  // ** for ajax, add error redirect to html
+  // **  for ajax, add error redirect to html
   // trigger popup
   $('.artistContainer').on('click', 'div', function(e) {
     $('[data-popup=popup]').fadeIn(350);
