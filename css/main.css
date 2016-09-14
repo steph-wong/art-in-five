@@ -114,6 +114,8 @@ HOME section
 ===================== */
 
 #home {
+  background-image: url("/images/cover.jpg");
+  background-size: cover;
   background-color: #333;
   color: #ffffff;
   display: -webkit-flex;
