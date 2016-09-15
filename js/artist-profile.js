@@ -12,8 +12,8 @@ $(document).ready(function() {
 //SLIDE ONE
 // ***************************
 
-  // var artist_id = this. b id;
-  var URI = '57da16dac1c62f0011ab3b9c';
+  // var artist_id = this.id;
+  var URI = '57da6439b8d69ba1d2296c11';
   var URL = 'https://ancient-wave-42701.herokuapp.com/api/artist_prof/' + URI;
 
   $.ajax({

@@ -29,7 +29,7 @@ $(function(){
 
   // **  for ajax, add error redirect to html
   // ajax call to popular artists
-  var URL = 'https://ancient-wave-42701.herokuapp.com/api/artist_prof/57da16dac1c62f0011ab3b9c';
+  var URL = 'https://ancient-wave-42701.herokuapp.com/api/list_artists_paint';
 
   $.ajax({
       url: URL,
@@ -38,39 +38,36 @@ $(function(){
     })
     .done(function(data) {
 
-      // formatting name and year
-      var name = data.localartist.name;
-      var nameSplit = name.split("");
-      var nameJoin = [];
+        for (var i = 0; i < data.localartists.length; i++) {
 
-      for (var i = 0; i < nameSplit.length; i++) {
-        if(nameSplit[i] === '(' ) {
-          nameSplit[i] = '<h4>(';
-        }
-       else nameSplit[i];
-      }
-      for (var j = 0; j < nameSplit.length; j++) {
-        if(nameSplit[j] === ')') {
-          nameSplit[j] = ')</h4>';
-        }
-        else nameSplit[j];
-      }
-      nameJoin = nameSplit.join("");
+          // formatting name and year
+          var name = data.localartists[i].name;
+          var nameSplit = name.split("");
+          var nameJoin = [];
 
-      // var populate_artists = function(data){
-        // for (var i = 0; i < data.length; i++) {
+          for (var j = 0; j < nameSplit.length; j++) {
+            if(nameSplit[j] === '(' ) {
+              nameSplit[j] = '<h4>(';
+            }
+           else nameSplit[j];
+          }
+          for (var k = 0; k < nameSplit.length; k++) {
+            if(nameSplit[k] === ')') {
+              nameSplit[k] = ')</h4>';
+            }
+            else nameSplit[k];
+          }
+          nameJoin = nameSplit.join("");
+
           $('.artistContainer').append(
-            $('<div class="indivArtist" data-popup-open="popup"><img src="' + data.paintings[2].image_url + '" width="150px"   height="170px">' + nameJoin + '</div>')
+            $('<div class="indivArtist" data-popup-open="popup"><img src="' + data.localartists[i].paintings[4].image_url + '" width="150px"   height="170px">' + nameJoin + '</div>')
           );
-        // }
-      // };
+        }
     })
 
 .fail(function(request, textStatus, errorThrown) {
   console.log("An error occured: " + request.status + " " + textStatus + " " + errorThrown);
 });
-
-
 
   // trigger popup
   $('.artistContainer').on('click', 'div', function(e) {
