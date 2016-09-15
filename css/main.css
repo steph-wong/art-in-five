@@ -96,6 +96,12 @@ navigation section
   background: #00c6d7;
   border-color: transparent;
 }
+.custom-navbar .navbar-hide {
+  visibility: collapse;
+}
+.custom-navbar .navbar-hide:hover {
+  visibility: visible;
+}
 @media(min-width:768px) {
   .custom-navbar {
     background: #4B4B4B;
@@ -214,13 +220,14 @@ ARTISTS section
 }
 #artists .container {
   width: 100%;
+  max-width: 1148px;
   padding: 100px;
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
 }
 #artists img {
   width: 100%;
   transition: all 0.4s ease-in-out;
-
 }
 #artists img:hover {
   opacity: 0.5;
@@ -262,6 +269,7 @@ ARTISTS section
 /* popup - inner div */
 .popup-inner {
   width: 90%;
+  max-width: 870px;
   height: 90%;
   padding: 10px;
   position: absolute;

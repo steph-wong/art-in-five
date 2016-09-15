@@ -26,11 +26,13 @@ $(function(){
 });
 
   // ARTIST PAGE
+
   // **  for ajax, add error redirect to html
   // trigger popup
   $('.artistContainer').on('click', 'div', function(e) {
     $('[data-popup=popup]').fadeIn(350);
-    $('.load-page').append('<iframe width="100%" height="100%" src="' + 'artist-profile.html" ' + 'frameborder="0"></iframe>');    e.preventDefault();
+    $('.load-page').append('<iframe width="100%" height="100%" src="' + 'artist-profile.html" ' + 'frameborder="0"></iframe>');
+    e.preventDefault();
   });
   // close popup
   $('[data-popup-close]').on('click', function(e) {
