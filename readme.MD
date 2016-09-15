@@ -43,5 +43,5 @@ A collaboration between two student web developers, the project is split between
 
 ### Contributers
 
-- back end | [bit-bit-g](https://github.com/bit-bit-g)
+- back end | [bitbit-g](https://github.com/bitbit-g)
 - front end | [steph-wong](https://github.com/steph-wong)
