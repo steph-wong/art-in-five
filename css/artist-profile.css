@@ -58,17 +58,17 @@ h3 {
 	padding: 10px;
 }
 .big-img {
-  width: 300px;
-  height: 350px;
-  overflow: hidden;
-}
-.small-img {
-  width: 200px;
+  width: auto;
   height: 250px;
   overflow: hidden;
 }
+.small-img {
+  width: auto;
+  height: 200px;
+  overflow: hidden;
+}
 .giant-img {
-  width: 600px;
+  width: auto;
   height: 350px;
   overflow: hidden;
 }

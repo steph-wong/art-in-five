@@ -13,7 +13,7 @@ $(document).ready(function() {
 // ***************************
 
   // var artist_id = this. b id;
-  var URI = '57da015daaa9d10011ac1d5a';
+  var URI = '57da16dac1c62f0011ab3b9c';
   var URL = 'https://ancient-wave-42701.herokuapp.com/api/artist_prof/' + URI;
 
   $.ajax({
@@ -44,7 +44,7 @@ $(document).ready(function() {
       $('#slideOneHeader').html($('<h1>' + nameJoin));
 
       // grabbing artist photo from db
-      $('#slideOneImg').html($('<img src=\"' + 'http://placehold.it/300x350' + '\" class=\"img-responsive big-img\">'));
+      $('#slideOneImg').html($('<img src=\"' + data.paintings[0].image_url + '\" class=\"img-responsive big-img\">'));
 
       // formatting bio to list form
       var bio = data.localartist.bio;
@@ -92,7 +92,7 @@ $(document).ready(function() {
     $('#slideTwoContent').html(backgroundJoin);
 
     // grabbing background photo from db
-    $('#slideTwoImg').html($('<img src=\"' + 'http://placehold.it/300x350' + '\" class=\"img-responsive big-img\">'));
+    $('#slideTwoImg').html($('<img src=\"' + data.paintings[1].image_url + '\" class=\"img-responsive big-img\"><p>' + data.paintings[1].title  + '</p>'));
 
 
 // ***************************
@@ -103,16 +103,15 @@ $(document).ready(function() {
   var influence = data.localartist.influence;
   var influenceSplit = influence.split('%@');
   var influenceName = influenceSplit[0].split(" ").slice(1).join(" ");
-  var influenceArtwork = influenceSplit[1].split(" ").slice(1).join(" ");
 
   $('#slideThreeHeader').html('<h2>Influence - ' + influenceName +
 '</h2>');
 
 // grabbing image of artist's artwork from db
-$('#slideThreeImg').html($('<img src=\"' + 'http://placehold.it/300x350' + '\" class=\"img-responsive big-img\">'));
+$('#slideThreeImg').html($('<img src=\"' + data.paintings[2].image_url + '\" class=\"img-responsive big-img\"><p>' + data.paintings[2].title + '</p>'));
 
 // grabbing image of influencer's artwork from db
-$('#slideThreeInfluence').html($('<img src=\"' + 'http://placehold.it/300x350' + '\" class=\"img-responsive big-img\"><p>' + influenceArtwork + '</p>'));
+$('#slideThreeInfluence').html($('<img src=\"' + data.paintings[5].image_url + '\" class=\"img-responsive big-img\"><p>' + data.paintings[5].title + '</p>'));
 
 
 // ***************************
@@ -140,7 +139,7 @@ $('#slideThreeInfluence').html($('<img src=\"' + 'http://placehold.it/300x350' +
   $('#slideFourContent').html(styleJoin);
 
   // grabbing image of artist's style from db
-  $('#slideFourImg').html($('<img src=\"' + 'http://placehold.it/300x350' + '\" class=\"img-responsive big-img\">'));
+    $('#slideFourImg').html($('<img src=\"' + data.paintings[3].image_url + '\" class=\"img-responsive giant-img\"><p>' + data.paintings[3].title + '</p>'));
 
 
   // ***************************
@@ -148,7 +147,7 @@ $('#slideThreeInfluence').html($('<img src=\"' + 'http://placehold.it/300x350' +
   // ***************************
 
     // grabbing image of artist's iconic work from db
-    $('#slideFiveImg').html($('<img src=\"' + 'http://placehold.it/600x350' + '\" class=\"img-responsive giant-img\">'));
+    $('#slideFiveImg').html($('<img src=\"' + data.paintings[4].image_url + '\" class=\"img-responsive giant-img\"><p>' + data.paintings[4].title + '</p>'));
 
 
   // ***************************
