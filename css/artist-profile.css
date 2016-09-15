@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f6f6f6;
 }
-#artist-profile h1 {
+h1 {
   font-size: 2.2em;
   font-family: sans-serif;
   color: #333;
@@ -20,6 +20,11 @@ h3 {
 	color: #4B4B4B;
 	margin: 0 0 15px 0;
 }
+h4 {
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+}
 .slide-container-1col {
   width: 75%;
   margin: 0 auto;
@@ -29,12 +34,13 @@ h3 {
 	width: 40%;
 	vertical-align: middle;
 }
-.slide-container-3col {
+.slide-container-4col {
 	display: inline-block;
-	width: 25%;
+	width: 15%;
 	text-align: center;
+  vertical-align: top;
 }
-.slide-container-3col:hover {
+.slide-container-4col:hover {
 	cursor: pointer;
 	opacity: 0.8;
 	font-weight: bold;
@@ -75,26 +81,35 @@ h3 {
 #slideOneContent {
   font-size: 1.4em;
 }
+#slideThreeImg img,
+#slideThreeInfluence img {
+  margin: 0 auto;
+}
 #slideSixArtistOne,
 #slideSixArtistTwo,
-#slideSixArtistThree {
+#slideSixArtistThree,
+#slideSixArtistFour {
   transition: all 0.4s ease-in-out;
 }
 #slideSixArtistOne img,
 #slideSixArtistTwo img,
-#slideSixArtistThree img {
+#slideSixArtistThree img,
+#slideSixArtistFour img {
   border: 1px solid #d7d7d7;
   border-radius: 3px;
   padding: 5px;
+  margin: 20px 0 20px 0;
 }
 #slideSixArtistOne:hover,
 #slideSixArtistTwo:hover,
-#slideSixArtistThree:hover {
+#slideSixArtistThree:hover,
+#slideSixArtistFour:hover {
   cursor: pointer;
   opacity: 0.5;
 }
 #slideSixArtistOne img:hover,
 #slideSixArtistTwo img:hover,
-#slideSixArtistThree img:hover {
+#slideSixArtistThree img:hover,
+#slideSixArtistFour img:hover {
   border: 1px solid #a8a8a8;
 }

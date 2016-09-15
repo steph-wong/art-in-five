@@ -51,8 +51,18 @@ $(document).ready(function() {
       var bioSplit = bio.split("");
       var bioJoin = [];
 
+      function checkBioFirstChac() {
+        if(bioSplit[0] === '%') {
+          bioSplit[0] = '@';
+        } else bioSplit[0];
+      }
+      checkBioFirstChac();
+
       for (var i = 0; i < bioSplit.length; i++) {
-        if(bioSplit[i] === '@') {
+        if(bioSplit[0] === '%') {
+          bioSplit[0] = '@';
+        }
+        else if(bioSplit[i] === '@') {
           bioSplit[i] = '<li>';
         }
        else bioSplit[i];
@@ -75,6 +85,13 @@ $(document).ready(function() {
     var background = data.localartist.background;
     var backgroundSplit = background.split("");
     var backgroundJoin = [];
+
+    function checkBgFirstChac() {
+      if(backgroundSplit[0] === '%') {
+        backgroundSplit[0] = '@';
+      } else backgroundSplit[0];
+    }
+    checkBgFirstChac();
 
     for (var i = 0; i < backgroundSplit.length; i++) {
       if(backgroundSplit[i] === '@') {
@@ -123,6 +140,13 @@ $('#slideThreeInfluence').html($('<img src=\"' + data.paintings[5].image_url + '
   var styleSplit = style.split("");
   var styleJoin = [];
 
+  function checkStyleFirstChac() {
+    if(styleSplit[0] === '%') {
+      styleSplit[0] = '@';
+    } else styleSplit[0];
+  }
+  checkStyleFirstChac();
+
   for (var i = 0; i < styleSplit.length; i++) {
     if(styleSplit[i] === '@') {
       styleSplit[i] = '<li>';
@@ -154,14 +178,21 @@ $('#slideThreeInfluence').html($('<img src=\"' + data.paintings[5].image_url + '
   // SLIDE SIX
   // ***************************
 
+    var similar = data.localartist.similar_artists;
+    var similarSplit1 = similar.split("").slice(1).join("");
+    var similarSplit = similarSplit1.split("").slice(0, -1).join("").split('%@');
+
     // grabbing image of similar artist 1 from db
-    $('#slideSixArtistOne').html($('<img src=\"' + 'http://placehold.it/200x350' + '\" class=\"img-responsive small-img\">'));
+    $('#slideSixArtistOne').html($('<img src=\"images/painting.png\"><h3>' + similarSplit[0] + '</h3>'));
 
     // grabbing image of imilar artist 2 from db
-    $('#slideSixArtistTwo').html($('<img src=\"' + 'http://placehold.it/200x350' + '\" class=\"img-responsive small-img\">'));
+    $('#slideSixArtistTwo').html($('<img src=\"images/museum.png\"><h3>' + similarSplit[1] + '</h3>'));
 
     // grabbing image of imilar artist 3 from db
-    $('#slideSixArtistThree').html($('<img src=\"' + 'http://placehold.it/200x350' + '\" class=\"img-responsive small-img\">'));
+    $('#slideSixArtistThree').html($('<img src=\"images/painting.png\"><h3>' + similarSplit[2] + '</h3>'));
+
+    // grabbing image of imilar artist 4 from db
+    $('#slideSixArtistFour').html($('<img src=\"images/museum.png\"><h3>' + similarSplit[3] + '</h3>'));
 
   })
 

@@ -113,14 +113,14 @@ navigation section
     padding: 8px;
     background: #4B4B4B;
   }
-}
+
 
 /* =====================
 HOME section
 ===================== */
 
 #home {
-  background-image: url("/images/cover2.jpg");
+  background-image: url("/images/cover.jpg");
   background-size: cover;
   background-color: #333;
   color: #ffffff;
@@ -256,9 +256,9 @@ ARTISTS section
   border-color: #a8a8a8;
 }
 #artists h4 {
-font-size: 10px;
-padding: 0;
-margin: 0;
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
 }
 /* popup - outer div */
 .popup {
@@ -313,6 +313,7 @@ margin: 0;
   transform: translate(50%, -50%) rotate(180deg);
   background: rgba(0, 0, 0, 1);
   text-decoration: none;
+  color: #00c6d7;
 }
 
 /* =====================
