@@ -5,6 +5,7 @@ Art in Five is an app that introduces users to Singapore art through a concise s
 The project is inspired by the lack of well-designed online resources dedicated to Singapore art.
 
 App is deployed on: https://steph-wong.github.io/art-in-five
+(NB: some plugins do not run on gh-pages. to view the app in full, fork and run on local host)
 
 Database is deployed on: https://ancient-wave-42701.herokuapp.com
 
